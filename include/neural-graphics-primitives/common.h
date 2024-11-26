@@ -134,6 +134,7 @@ enum class ETestbedMode : int {
 	Sdf,
 	Image,
 	Volume,
+	Nifti,
 	None,
 };
 

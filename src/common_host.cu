@@ -151,11 +151,18 @@ ETestbedMode mode_from_scene(const std::string& scene) {
 
 	if (scene_path.is_directory() || equals_case_insensitive(scene_path.extension(), "json")) {
 		return ETestbedMode::Nerf;
-	} else if (equals_case_insensitive(scene_path.extension(), "obj") || equals_case_insensitive(scene_path.extension(), "stl")) {
+	}
+	else if (equals_case_insensitive(scene_path.extension(), "obj") || equals_case_insensitive(scene_path.extension(), "stl")) {
 		return ETestbedMode::Sdf;
-	} else if (equals_case_insensitive(scene_path.extension(), "nvdb")) {
+	}
+	else if (equals_case_insensitive(scene_path.extension(), "nvdb")) {
 		return ETestbedMode::Volume;
-	} else { // probably an image. Too bothersome to list all supported ones: exr, bin, jpg, png, tga, hdr, ...
+	}
+	else if (equals_case_insensitive(scene_path.extension(), "gz"))
+	{
+		return ETestbedMode::Nifti;
+	}
+	else { // probably an image. Too bothersome to list all supported ones: exr, bin, jpg, png, tga, hdr, ...
 		return ETestbedMode::Image;
 	}
 }
