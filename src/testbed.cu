@@ -33,6 +33,8 @@
 #include <tiny-cuda-nn/optimizer.h>
 #include <tiny-cuda-nn/trainer.h>
 
+#include <RNifti.h>
+
 #include <json/json.hpp>
 
 #include <filesystem/directory.h>
