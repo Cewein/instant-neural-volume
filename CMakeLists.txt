@@ -268,6 +268,7 @@ list(APPEND NGP_SOURCES
 	src/testbed_nerf.cu
 	src/testbed_sdf.cu
 	src/testbed_volume.cu
+	#src/testbed_nifti.cu
 	src/thread_pool.cpp
 	src/tinyexr_wrapper.cu
 	src/tinyobj_loader_wrapper.cu
