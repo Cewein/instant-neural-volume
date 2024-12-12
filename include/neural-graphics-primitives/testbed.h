@@ -275,7 +275,6 @@ public:
 	void train_volume(size_t target_batch_size, bool get_loss_scalar, cudaStream_t stream);
 	void training_prep_volume(uint32_t batch_size, cudaStream_t stream) {}
 	void load_volume(const fs::path& data_path);
-	void load_nifti(const fs::path& data_path);
 
 	class CudaDevice;
 
