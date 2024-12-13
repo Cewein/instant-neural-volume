@@ -204,6 +204,7 @@ list(APPEND NGP_INCLUDE_DIRECTORIES
 	"dependencies/nanovdb"
 	"dependencies/NaturalSort"
 	"dependencies/tinylogger"
+	"dependencies/nifti_clib"
 )
 
 find_package(OpenMP)
