@@ -27,6 +27,8 @@ option(NGP_BUILD_WITH_VULKAN "Build with Vulkan to enable DLSS support?" ON)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+include(FetchContent)
+
 ###############################################################################
 # Build type and C++ compiler setup
 ###############################################################################

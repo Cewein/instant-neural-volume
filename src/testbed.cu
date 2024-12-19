@@ -147,7 +147,9 @@ void Testbed::load_training_data(const fs::path& path) {
 		case ETestbedMode::Sdf:    load_mesh(path); break;
 		case ETestbedMode::Image:  load_image(path); break;
 		case ETestbedMode::Volume: load_volume(path); break;
-		case ETestbedMode::Nifti: throw std::runtime_error{ "Nifti not supported yet!" }; 
+		case ETestbedMode::Nifti: 
+			p = nifti_image_read(path.str().c_str(),1);
+			throw std::runtime_error{ "Nifti not supported yet!" }; 
 		default: throw std::runtime_error{"Invalid testbed mode."};
 	}
 
