@@ -27,6 +27,8 @@ option(NGP_BUILD_WITH_VULKAN "Build with Vulkan to enable DLSS support?" ON)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+include(FetchContent)
+
 ###############################################################################
 # Build type and C++ compiler setup
 ###############################################################################
@@ -204,6 +206,7 @@ list(APPEND NGP_INCLUDE_DIRECTORIES
 	"dependencies/nanovdb"
 	"dependencies/NaturalSort"
 	"dependencies/tinylogger"
+	"dependencies/nifti_clib"
 )
 
 find_package(OpenMP)
